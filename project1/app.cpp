@@ -3,7 +3,7 @@
  [Full name] : [Javokhir Shomuratov]
  [Student year]: [Freshman]
  [Finished date] : [25.12.2020 15:54]
-  [Taken time to finish]: [only 1.5 days (with breaks)]
+ [Taken time to finish]: [only 1.5 days (with breaks)]
  [Used IDE] : [VScode]
  [OS] : [Windows]
  [Listened musics while doing this project] : [https://www.youtube.com/watch?v=DJbYSST4_w0&list=RDDJbYSST4_w0&start_radio=1]
@@ -126,18 +126,18 @@ void printWelcomeText(){
 void printMenuForClient(){
     const int DELAY_TIME = 120; // delay time to show every menu. (In milliseconds)
     
-    cout<<"<---=========== CLIENT MENU ===========--->"<<endl;
+    cout<<" <---=========== CLIENT MENU ===========--->"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"1) Dashboard"<<endl;
+    cout<<" [1] Dashboard"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"2) My orders"<<endl;
+    cout<<" [2] My orders"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"3) Booking hotel"<<endl;
+    cout<<" [3] Booking hotel"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"4) Switch to admin role"<<endl;
+    cout<<" [4] Switch to admin role"<<endl;
     Sleep(DELAY_TIME);
     
-    cout<<"<---===================================--->"<<endl;
+    cout<<" <---===================================--->"<<endl;
 
     cout<<endl;
     cout<<" Your choice: ";
@@ -147,18 +147,18 @@ void printMenuForClient(){
 void printMenuForAdmin(){ 
     const int DELAY_TIME = 120; // in ms
     
-    cout<<"<---=========== CLIENT MENU ===========--->"<<endl;
+    cout<<" <---=========== CLIENT MENU ===========--->"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"1) Dashboard"<<endl;
+    cout<<" [1] Dashboard"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"2) Hotels"<<endl;
+    cout<<" [2] Hotels"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"3) Add new hotel"<<endl;
+    cout<<" [3] Add new hotel"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"4) Switch to client role"<<endl;
+    cout<<" [4] Switch to client role"<<endl;
     Sleep(DELAY_TIME);
     
-    cout<<"<---===================================--->"<<endl;
+    cout<<" <---===================================--->"<<endl;
 
     cout<<endl;
     cout<<" Your choice: ";
@@ -168,13 +168,13 @@ void printMenuForAdmin(){
 void printUserOrders(){
     const int DELAY_TIME = 120; // in ms
     
-    cout<<"<---=========== My orders ===========--->"<<endl;
+    cout<<" <---=========== My orders ===========--->"<<endl;
     Sleep(DELAY_TIME);
     for(int i=0;i<usersOrders.size(); i++){
-        cout<<" Index: "<<i+1<<" name: "<<usersOrders[i].name<<" location: "<<usersOrders[i].location<<" rooms: "<<usersOrders[i].rooms<<endl;
+        cout<<" ["<<i+1<<"] name: "<<usersOrders[i].name<<" location: "<<usersOrders[i].location<<" rooms: "<<usersOrders[i].rooms<<endl;
         Sleep(DELAY_TIME);
     }
-    cout<<" 0) Back"<<endl;
+    cout<<" [0] Back"<<endl;
     Sleep(DELAY_TIME);
     if(usersOrders.size() == 0){
         cout<<" You have no orders yet"<<endl;
@@ -197,7 +197,7 @@ void deleteUsersHotel(int hotelIndex){
         usersOrders.erase(usersOrders.begin() + hotelIndex);
         cout<<" This hotel succesfully deleted from your booking list !!!";
     }else{
-        cout<<"You entered wrong input !!!";
+        cout<<" You entered wrong input !!!";
     }
 
     
@@ -208,29 +208,29 @@ void deleteUsersHotel(int hotelIndex){
 void printHotelsToBook(){
     const int DELAY_TIME = 120; // in ms
     
-    cout<<"<---=========== These are hotels you can book ===========--->"<<endl;
+    cout<<" <---=========== These are hotels you can book ===========--->"<<endl;
     Sleep(DELAY_TIME);
     
     for (int i=0; i<hotels.size(); i++) {
-        cout<<"["<<i+1<<"]"<<" Name: "<<hotels[i].name<<" Location: "<<hotels[i].location<<" Rooms: "<<hotels[i].rooms<<endl;
+        cout<<" ["<<i+1<<"]"<<" Name: "<<hotels[i].name<<" Location: "<<hotels[i].location<<" Rooms: "<<hotels[i].rooms<<endl;
         Sleep(DELAY_TIME);
     }
-    cout<<"[0] Back"<<endl;
+    cout<<" [0] Back"<<endl;
     if(hotels.size() == 0){
-        cout<<"* There is no any hotels to book right now"<<endl;
+        cout<<" * There is no any hotels to book right now"<<endl;
     }else{
-        cout<<"*Type the number of hotel in order to book"<<endl;
+        cout<<" *Type the index number of hotel in order to book"<<endl;
     }
-    cout<<"Your choice: ";
+    cout<<" Your choice: ";
 }   
 //this function will be book hotel that is at index
 void bookHotel(int hotelIndexToBook){
     hotelIndexToBook -= 1; //Because we showed hotels indexes to user by adding 1 to their indexes;
     if(hotelIndexToBook >=0 && hotelIndexToBook < hotels.size()){
         usersOrders.push_back(hotels[hotelIndexToBook]);
-        cout<<"Hotel booked succesfully !!!";
+        cout<<" Hotel booked succesfully !!!";
     }else{
-        cout<<"You entered wrong input !!!";
+        cout<<" You entered wrong input !!!";
     }
     Sleep(1000);
     
@@ -239,13 +239,13 @@ void bookHotel(int hotelIndexToBook){
 void printAdminsHotels(){
     const int DELAY_TIME = 120; // in ms
     
-    cout<<"<---=========== Hotels ===========--->"<<endl;
+    cout<<" <---=========== Hotels ===========--->"<<endl;
     Sleep(DELAY_TIME);
     for(int i=0;i<hotels.size(); i++){
-        cout<<" Index: "<<i+1<<" name: "<<hotels[i].name<<" location: "<<hotels[i].location<<" rooms: "<<hotels[i].rooms<<endl;
+        cout<<" ["<<i+1<<"] name: "<<hotels[i].name<<" location: "<<hotels[i].location<<" rooms: "<<hotels[i].rooms<<endl;
         Sleep(DELAY_TIME);
     }
-    cout<<" 0) Back"<<endl;
+    cout<<" [0] Back"<<endl;
     Sleep(DELAY_TIME);
     if(hotels.size() == 0){
         cout<<" There is no hotels yet"<<endl;
@@ -255,7 +255,7 @@ void printAdminsHotels(){
         cout<<" Enter the index of the hotel in order to delete"<<endl;
         Sleep(DELAY_TIME);
     }
-    cout<<"---===================================---"<<endl;
+    cout<<" ---===================================---"<<endl;
     cout<<endl;
     cout<<" Your choice: ";
 }
@@ -267,7 +267,7 @@ void deleteAdminsHotel(int hotelIndex){
         hotels.erase(hotels.begin() + hotelIndex);
         cout<<" This hotel succesfully deleted !!!";
     }else{
-        cout<<"You entered wrong input !!!";
+        cout<<" You entered wrong input !!!";
     }
 
     Sleep(1500);
@@ -277,20 +277,20 @@ void addNewHotel(){
     const int DELAY_TIME = 120; // in ms
     string newHotelName, newHotelLocation;
     int newHotelRooms;
-    cout<<"<---=========== Adding new hotel ===========--->"<<endl;
+    cout<<" <---=========== Adding new hotel ===========--->"<<endl;
     Sleep(DELAY_TIME);
-    cout<<"Please enter the details in order to add new hotel"<<endl;
+    cout<<" Please enter the details in order to add new hotel"<<endl;
     Sleep(DELAY_TIME);
     std::getchar(); // I dont know what this line does but when I dont put it here my code does not work properly :(
-    cout<<"Hotel name: "; std::getline(std::cin, newHotelName); //I used this type of getting input from console. Because orinary cin method can not read words with spaces;
-    cout<<"Hotel location: "; std::getline(std::cin, newHotelLocation);
-    cout<<"Hotel rooms: "; cin>>newHotelRooms;
+    cout<<" Hotel name: "; std::getline(std::cin, newHotelName); //I used this type of getting input from console. Because orinary cin method can not read words with spaces;
+    cout<<" Hotel location: "; std::getline(std::cin, newHotelLocation);
+    cout<<" Hotel rooms: "; cin>>newHotelRooms;
     Hotel newHotel;
     newHotel.name = newHotelName;
     newHotel.location = newHotelLocation;
     newHotel.rooms = newHotelRooms;
     hotels.push_back(newHotel);
-    cout<<"New hotel added succesfully !";
+    cout<<" New hotel added succesfully !";
     currentScreen = DASHBOARD;
     Sleep(1500);
 }

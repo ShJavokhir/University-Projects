@@ -12,10 +12,12 @@ class Employee{
         string getEmployeeId() {return this->employeeId;};
         void setEmployeeName(string empName){ employeeName = empName;}
         string getEmployeeName() {return this->employeeName;}
-        void setNoOfHours(int noOfHours) {noOfHours = noOfHours;}
+        void setNoOfHours(int noOfHours) {this->noOfHours = noOfHours;}
         int getNoOfHours() {return this->noOfHours;}
-        void setRatePerHour(int rateOfHour) {rateOfHour = rateOfHour;}
+        void setRatePerHour(int rateOfHour) {this->rateOfHour = rateOfHour;}
         int getRatePerHour() {return this->rateOfHour;}
 
-        string getTotalMonthlySalary() {return "I dont know how to calculate monthly salary based on these information.";}
+        double getTotalMonthlySalary() {
+            return 30 * this->rateOfHour * this->noOfHours;
+        }
 };

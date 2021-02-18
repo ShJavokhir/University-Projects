@@ -75,6 +75,8 @@ int main(){
     cin>>oop2Score;
 
 
+    cout<<"--------------------------------------";
+
     me.setStudentId(studentId);
     me.setStudentName(studentName);
     me.setEnglishScore(englishScore);

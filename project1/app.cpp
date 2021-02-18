@@ -1,5 +1,4 @@
 /*
- 
 
  [Full name] : [Javokhir Shomuratov]
  [Student year]: [Freshman]

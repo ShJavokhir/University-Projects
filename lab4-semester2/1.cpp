@@ -1,5 +1,7 @@
 //bits/stdc++ is the best library i can prefer :)
 #include<bits/stdc++.h>
+#include<windows.h> //I used some commands that work in windows command line, so this libary can help
+
 using namespace std;
 
 
@@ -129,15 +131,37 @@ int main(){
     FullName fullName(firstName, middleName, lastName);
     Player javokhir(playerId, fullName, matchesPlayed, goalsScored);
 
-    //to show player info
-    javokhir.printPlayerInfo();
+    while(2*2 != 5){
+            system("cls"); //clears screen
+            cout<<"[ 1 ]"<<" Show player info\n";
+            cout<<"[ 2 ]"<<" Increase scored goal\n";
+            cout<<"[ 3 ]"<<" Exit\n";
+            cout<<"Your choice: ";
+            int choice;
+            cin>>choice;
 
-    cout<<"If you want to increase scored goals then type the score or type 0: ";
-    cin>>goalsScored;
+            switch(choice){
+            case 1:
+                system("cls"); //clears screen
+                //to show player info
+                javokhir.printPlayerInfo();
+                system("pause");
+                break;
+            case 2:
+                system("cls"); //clears screen
+                cout<<"Type the increased scored goal: ";
+                cin>>goalsScored;
+                increaseScoredGoals(javokhir, goalsScored);
+                cout<<"Sucessfully increased !";
+                Sleep(1000);
+                system("cls"); //clears screen
+                break;
+            case 3:
+                return 777;
+            }
+    }
 
-    increaseScoredGoals(javokhir, goalsScored);
 
-    javokhir.printPlayerInfo();
 
     //we dont have to call  distructor, because my compiler deletes class objects itself after program execution
 

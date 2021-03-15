@@ -45,7 +45,7 @@ int main(){
     cout<<"Second: "; cin>>second;
     //creating new object of class DayTime
     DayTime exampleDayTime(hour, minute, second);
-
+    system("cls");
     while(2*2!=5){
         //showing menu for user
         cout<<"\nMENU"<<endl;
@@ -56,7 +56,7 @@ int main(){
         cout<<"[0] Exit"<<endl;
         int choice;
         cin>>choice;
-        system("clear");
+        system("cls");
         switch (choice)
         {
         case 1:
@@ -92,7 +92,7 @@ int main(){
             break;
         }
         
-        system("clear");
+        system("cls");
         
     } 
     return 0;

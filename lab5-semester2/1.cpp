@@ -31,7 +31,7 @@ class DayTime{
             this->second ++;
         }
         void operator --(){
-            this->second --;
+            this->minute --;
         }
 };
 
@@ -79,7 +79,7 @@ int main(){
             break;
         case 4:
             --exampleDayTime;
-            cout<<"Second is decreased by 1\n\n";
+            cout<<"Minute is decreased by 1\n\n";
             //usleep(2000000); //enable this line if you are in mac os
             Sleep(2000); ////disable this if you are in mac os
             break;

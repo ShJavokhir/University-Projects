@@ -5,6 +5,7 @@ class Rectangle{
     private:
         double length, breadth;
     public:
+        Rectangle();
         Rectangle(double length, double breadth){
             this->length = length;
             this->breadth = breadth;
@@ -28,7 +29,10 @@ int main(){
     Rectangle rect1(7,8);
     cout<<"Area of rectangle 1: "<<rect1.getArea()<<endl;
 
-    Rectangle rect2(10,20);
+    Rectangle rect2;
+    rect2.setBreadth(10);
+    rect2.setLength(20);
+
     cout<<"Area of rectangle 2: "<<rect2.getArea()<<endl;;
     
     Rectangle rect3 = rect1 + rect2;

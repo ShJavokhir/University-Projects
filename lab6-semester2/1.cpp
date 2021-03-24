@@ -9,7 +9,7 @@ class Rectangle{
     public:
         //public members
         //default constructor
-        Rectangle();
+        Rectangle(){};
         //parametric constructor
         Rectangle(double length, double breadth){
             this->length = length;

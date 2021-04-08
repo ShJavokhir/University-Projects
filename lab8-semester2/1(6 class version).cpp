@@ -32,18 +32,22 @@ public:
         cout << "Code: " << code << endl;
         cout << "Name: " << name << endl;
     }
-    void setCode(int code){
+    void setCode(int code)
+    {
         this->code = code;
     }
-    void setName(string name){
+    void setName(string name)
+    {
         this->name = name;
     }
-    int getCode(){
+    int getCode()
+    {
         return code;
-    } 
-    string getName(){
+    }
+    string getName()
+    {
         return name;
-    } 
+    }
 };
 //Teacher class derives Staff class
 class Teacher : public Staff
@@ -69,12 +73,14 @@ public:
         cout << "Subject name: " << subject << endl;
         cout << "Number of publications: " << publicationCount << endl;
     }
-    void setSubject(string subject){
+    void setSubject(string subject)
+    {
         this->subject = subject;
     }
-    string getSubject(){
+    string getSubject()
+    {
         return subject;
-    } 
+    }
 };
 
 class Officer : public Staff
@@ -94,10 +100,12 @@ public:
         cout << "Staff type: Officer" << endl;
         cout << "Grade: " << grade << endl;
     }
-    void setGrade(string grade){
+    void setGrade(string grade)
+    {
         this->grade = grade;
     }
-    string getGrade(){
+    string getGrade()
+    {
         return grade;
     }
 };
@@ -117,12 +125,14 @@ public:
     {
         cout << "Speed: " << speed << endl;
     }
-    void setSpeed(int speed){
+    void setSpeed(int speed)
+    {
         this->speed = speed;
     }
-    int getSpeed(){
+    int getSpeed()
+    {
         return speed;
-    } 
+    }
 };
 
 class RegularTypist : public Typist
@@ -143,10 +153,12 @@ public:
         printTypistInfo();
         cout << "Monthly salary: " << monthlySalary << endl;
     }
-    void setMonthlySalary(double monthlySalary){
+    void setMonthlySalary(double monthlySalary)
+    {
         this->monthlySalary = monthlySalary;
     }
-    double getMonthlySalary(){
+    double getMonthlySalary()
+    {
         return monthlySalary;
     }
 };
@@ -169,10 +181,12 @@ public:
         printTypistInfo();
         cout << "Daily wages: " << dailyWages << endl;
     }
-    void setDailyWages(double dailyWages){
+    void setDailyWages(double dailyWages)
+    {
         this->dailyWages = dailyWages;
     }
-    double getDailyWages(){
+    double getDailyWages()
+    {
         return dailyWages;
     }
 };

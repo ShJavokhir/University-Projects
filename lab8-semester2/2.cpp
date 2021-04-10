@@ -1,3 +1,10 @@
+/*
+    This code is written by Javokhir Shomuratov
+    U2010257
+    Telegram: @shjavohir
+    Github: https://github.com/shjavokhir
+*/
+
 #include <iostream>
 using namespace std;
 

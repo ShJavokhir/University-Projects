@@ -49,8 +49,34 @@ public:
         return name;
     }
 };
+
+class Education
+{
+protected:
+    int highest_professional_qualification;
+
+public:
+    Education()
+    {
+        cout << "Highest professional qualification (integer number): ";
+        cin >> highest_professional_qualification;
+    }
+    void setHighestProfessionalQualification(int highest_professional_qualification)
+    {
+        this->highest_professional_qualification = highest_professional_qualification;
+    }
+    int getHighestProfessionalQualification()
+    {
+        return highest_professional_qualification;
+    }
+    void printEducationInfo()
+    {
+        cout << " - Highest professional qualification: " << highest_professional_qualification << endl;
+    }
+};
+
 //Teacher class derives Staff class
-class Teacher : public Staff
+class Teacher : public Staff, public Education
 {
 protected:
     string subject;
@@ -69,6 +95,7 @@ public:
     {
         //calling Parent class member function to get Staff information
         printStaffInfo();
+        printEducationInfo();
         cout << " - Staff type: Teacher" << endl;
         cout << " - Subject name: " << subject << endl;
         cout << " - Number of publications: " << publicationCount << endl;
@@ -83,7 +110,7 @@ public:
     }
 };
 
-class Officer : public Staff
+class Officer : public Staff, public Education
 {
 protected:
     string grade;
@@ -97,6 +124,7 @@ public:
     void printOfficerInfo()
     {
         printStaffInfo();
+        printEducationInfo();
         cout << " - Staff type: Officer" << endl;
         cout << " - Grade: " << grade << endl;
     }

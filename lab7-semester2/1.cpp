@@ -59,7 +59,7 @@ int main(){
     sariqDevniMinib.setData();
     //defining our tape class that derives Publication class
     Tape otganKunlar;
-    cout<<"Please Tape book details"<<endl;
+    cout<<"Please enter Tape book details"<<endl;
     //and calling public function in base Class which is Publication class
     otganKunlar.Publication::setData();
     //after that calling setData() function of our Tape class

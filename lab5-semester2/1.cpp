@@ -42,17 +42,21 @@ int main(){
     cout<<"Enter initial time\n";
     cout<<"Hour: "; cin>>hour;
     cout<<"Minute: "; cin>>minute;
+    if(minute >= 60){
+        hour += minute/60;
+        minute = minute % 60  
+    }
     cout<<"Second: "; cin>>second;
     //creating new object of class DayTime
     DayTime exampleDayTime(hour, minute, second);
     system("cls");
-    while(2*2!=5){
+    while("C++" != "JAVA"){
         //showing menu for user
         cout<<"\nMENU"<<endl;
         cout<<"[1] Display time"<<endl;
         cout<<"[2] Display time in seconds"<<endl;
         cout<<"[3] Increment seconds"<<endl;
-        cout<<"[4] Decrement seconds"<<endl;
+        cout<<"[4] Decrement minutes"<<endl;
         cout<<"[0] Exit"<<endl;
         int choice;
         cin>>choice;

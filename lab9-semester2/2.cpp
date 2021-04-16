@@ -95,7 +95,7 @@ public:
     void displayArea()
     {
         // pi * r^2
-        cout << "Area of circle: " << M_PI * a * a;
+        cout << "Area of circle: " << 3.14 * a * a;
     }
 };
 
@@ -128,6 +128,7 @@ int main()
     else
     {
         cout << "Wrong input";
+        return 0;
     }
 
     //displaying area

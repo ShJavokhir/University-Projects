@@ -90,6 +90,7 @@ int main()
         myShape =  &triangle;
     }else{
         cout<<"Wrong input";
+        return 0;
     }
 
     //displaying area

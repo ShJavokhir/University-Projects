@@ -34,6 +34,7 @@ int main()
     {
         cout << line << endl;
     }
+    stream1.close();
 
     return 0;
 }

@@ -49,7 +49,7 @@ void writeToFile(){
         }
 
     }
-
+    ofs.close();
 }
 
 void readFromFile(){
@@ -65,6 +65,7 @@ void readFromFile(){
     while(ifs.read((char*)&person, sizeof(Person))){
         person.printData();
     }
+    ifs.close();
 }
 
 //clean main function

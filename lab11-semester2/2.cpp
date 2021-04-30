@@ -14,10 +14,13 @@
 DISCLAIMER
 
 
-I AM FUCKIN TIRED OF THIS SHITTY PROGRAM, IT DOES NOT WORK PROPERLY, CPP SUCKS
+I AM VERY TIRED OF THIS harmful (bad) PROGRAM, IT DOES NOT WORK PROPERLY, CPP is very .....
+
 DONT COPY THIS TASK YET
 
-I spent about 2.30 fuckin hours for this shit. But there are still bugs with addRecord function.....
+I spent about 2.30 hours for this ***. But there are still bugs with addRecord function.....
+
+I hope i will fix them tomorrow
 
 
 */

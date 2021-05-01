@@ -1,14 +1,14 @@
 /*
     Started at 17:45 01.05.2021
-    Finished at 
-    Total lines of code: 
-
-    Team project
-        Ticket booking
+    Finished at 21:27 01.05.2021
+    Total lines of code: 500
+    
+    Team project: Flyght Ticket booking
     Team members:
-        Ilyar (id), Qobil (id), Javokhir (id)
-    Section number:
-        I dont know
+        Sobitov Ilyar U2010267 
+        Tulaganov Qobiljon U2010285 
+        Javokhir Shomuratov U2010257  
+    Section number: 002
 */
 
 #include <iostream>
@@ -19,12 +19,6 @@ using namespace std;
 
 static string INPUT_SHOULD_BE_DIGIT_EXCEPTION = "Input should be digit !";
 static string INCORRECT_MENU_EXCEPTION = "You have entered incorrect menu number !";
-
-enum ROLES
-{
-    ADMIN,
-    CLIENT
-};
 
 class Ticket
 {
@@ -173,7 +167,6 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|================| NEW TICKET |================|" << endl;
         cout << " ----------------------------------------------" << endl;
-
         cout << "Where to fly: ";
         cin >> toWhere;
         cout << "Seat number: ";
@@ -184,7 +177,7 @@ public:
         ofs.write((char *)&ticket, sizeof(Ticket));
         ofs.close();
         cout << " ----------------------------------------------" << endl;
-        cout << "|:::::::::::::::| SUCCESFULLY |::::::::::::::::|" << endl;
+        cout << "|:::::::::::::| ADDED SUCCESFULLY |::::::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
         usleep(2000000);
     }
@@ -192,7 +185,6 @@ public:
     void printTickets()
     {
         ifs.open("tickets", ios::binary);
-
         system("clear");
         cout << " ----------------------------------------------" << endl;
         cout << "|==============| LIST OF TICKETS |=============|" << endl;
@@ -208,8 +200,8 @@ public:
         cout << "|:::::::: Flyght Ticket Booking System ::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
 
-        usleep(2000000); //TODO:: this line should be replaced with system("pause");
-
+        //usleep(3000000); //TODO:: this line should be replaced with system("pause");
+        system("pause");
         ifs.close();
     }
     void deleteTicket()
@@ -471,7 +463,6 @@ public:
                 cout << " ----------------------------------------------" << endl;
                 cout << "|:::::::::::: DELETED SUCCESFULLY :::::::::::::|" << endl;
                 cout << " ----------------------------------------------" << endl;
-
                 usleep(2000000);
             }
             else
@@ -479,7 +470,6 @@ public:
                 cout << " ----------------------------------------------" << endl;
                 cout << "|:::::::::: TICKET NUMBER NOT FOUND :::::::::::|" << endl;
                 cout << " ----------------------------------------------" << endl;
-
                 usleep(2000000);
             }
         }
@@ -490,9 +480,11 @@ int main()
 {
     Application *app;
     bool switcher = true;
+
     while (1 != 2)
     {
         switcher = !switcher;
+        
         if (switcher)
         {
             app = new ClientApp();
@@ -501,9 +493,9 @@ int main()
         {
             app = new AdminApp();
         }
-
+       
         app->handleMenu();
     }
-
+    
     return 777;
 }

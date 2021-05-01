@@ -13,7 +13,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <unistd.h>
+#include<windows.h>
+
+//#include <unistd.h>
 
 using namespace std;
 
@@ -47,7 +49,7 @@ class Exception
 public:
     void showError(string message)
     {
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|==================| ERROR |==================|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -55,7 +57,7 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|:::::::: Flyght Ticket Booking System ::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(2000000);
+        Sleep(2000);
     }
 };
 
@@ -64,7 +66,7 @@ class GeneralFunctions : protected Exception
 public:
     void aboutMenu()
     {
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|=================| AUTHORS |==================|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -74,16 +76,16 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|:::::::: Flyght Ticket Booking System ::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(4000000);
+        Sleep(4000);
     }
 
     void exitProgram()
     {
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|=========| THANKS FOR THE ATTENTION |=========|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(2000000);
+        Sleep(2000);
         exit(0);
     }
 };
@@ -163,7 +165,7 @@ public:
         double price;
         ofs.open("tickets", ios::binary | ios::app);
 
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|================| NEW TICKET |================|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -179,13 +181,13 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|:::::::::::::| ADDED SUCCESFULLY |::::::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(2000000);
+        Sleep(2000);
     }
 
     void printTickets()
     {
         ifs.open("tickets", ios::binary);
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|==============| LIST OF TICKETS |=============|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -193,7 +195,7 @@ public:
         while (ifs.read((char *)&ticket, sizeof(Ticket)))
         {
             ticket.printData();
-            usleep(100000);
+            Sleep(100);
         }
 
         cout << " ----------------------------------------------" << endl;
@@ -211,7 +213,7 @@ public:
         int i = 1;
         int usersChoice;
         int positionToDelete;
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|==============| Deleting ticket |=============|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -220,7 +222,7 @@ public:
             cout << "[" << i << "] ";
             ticket.printData();
             i++;
-            usleep(100000);
+            Sleep(100);
         }
         cout << "\nEnter the number of Ticket in order to delete it or 0 for cancel: ";
         cin >> usersChoice;
@@ -258,7 +260,7 @@ public:
             cout << "|:::::::::::: DELETED SUCCESFULLY :::::::::::::|" << endl;
             cout << " ----------------------------------------------" << endl;
 
-            usleep(2000000);
+            Sleep(2000);
         }
         else
         {
@@ -266,7 +268,7 @@ public:
             cout << "|:::::::::: TICKET NUMBER NOT FOUND :::::::::::|" << endl;
             cout << " ----------------------------------------------" << endl;
 
-            usleep(2000000);
+            Sleep(2000);
         }
         ifs.close();
         ofs.close();
@@ -335,7 +337,7 @@ public:
     }
     void bookTicket()
     {
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|==============| BOOKING TICKET |==============|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -350,7 +352,7 @@ public:
             cout << "[" << i << "] ";
             ticket.printData();
             i++;
-            usleep(100000);
+            Sleep(100);
         }
         cout << "\nEnter the number of Ticket in order to book or 0 for cancel: ";
         cin >> usersChoice;
@@ -374,7 +376,7 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|:::::::::::: BOOKED SUCCESFULLY ::::::::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(2000000);
+        Sleep(2000);
 
         ifs.close();
         ofs.close();
@@ -387,7 +389,7 @@ public:
         double price;
         ofs.open("tickets", ios::binary | ios::app);
 
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|================| NEW TICKET |================|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -404,7 +406,7 @@ public:
         cout << " ----------------------------------------------" << endl;
         cout << "|:::::::::::::::| SUCCESFULLY |::::::::::::::::|" << endl;
         cout << " ----------------------------------------------" << endl;
-        usleep(2000000);
+        Sleep(2000);
     }
 
     void printMyTickets()
@@ -414,7 +416,7 @@ public:
         int i = 1;
         int usersChoice;
         int positionToDelete;
-        system("clear");
+        system("cls");
         cout << " ----------------------------------------------" << endl;
         cout << "|==============| BOOKED TICKETS |==============|" << endl;
         cout << " ----------------------------------------------" << endl;
@@ -423,7 +425,7 @@ public:
             cout << "[" << i << "] ";
             ticket.printData();
             i++;
-            usleep(100000);
+            Sleep(100);
         }
         ifs.close();
 
@@ -463,14 +465,14 @@ public:
                 cout << " ----------------------------------------------" << endl;
                 cout << "|:::::::::::: DELETED SUCCESFULLY :::::::::::::|" << endl;
                 cout << " ----------------------------------------------" << endl;
-                usleep(2000000);
+                Sleep(2000);
             }
             else
             {
                 cout << " ----------------------------------------------" << endl;
                 cout << "|:::::::::: TICKET NUMBER NOT FOUND :::::::::::|" << endl;
                 cout << " ----------------------------------------------" << endl;
-                usleep(2000000);
+                Sleep(2000);
             }
         }
     }

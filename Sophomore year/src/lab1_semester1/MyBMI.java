@@ -1,3 +1,9 @@
+/*
+    Author: Javokhir Shomuratov
+    Time: 18.09.2021 12:40
+    ID: U2010257
+ */
+
 package lab1_semester1;
 import java.util.Scanner;
 

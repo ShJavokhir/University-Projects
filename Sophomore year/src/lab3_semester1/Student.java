@@ -17,13 +17,15 @@ package lab3_semester1;
  * Time: 15:05<br/>
  */
 public class Student {
+    //This is parent class for SocieStudent and SolStudent classes
+
     private String studentName;
     private int studentId;
     private double english;
     private double maths;
-
+    //Default constructor
     public Student(){}
-
+    //Parametric constructor
     public Student(String studentName, int studentId, double english, double maths) {
         this.studentName = studentName;
         this.studentId = studentId;
@@ -31,6 +33,7 @@ public class Student {
         this.maths = maths;
     }
 
+    //getter setters
     public String getStudentName() {
         return studentName;
     }

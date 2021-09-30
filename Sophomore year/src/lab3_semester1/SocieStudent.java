@@ -26,7 +26,7 @@ class SocieStudent extends Student{
         this.oop1 = oop1;
         this.introToIt = introToIt;
     }
-
+    //Here is we are using super method that passes arguments to parent class
     public SocieStudent(String studentName, int studentId, double english, double maths, double oop1, double introToIt) {
         super(studentName, studentId, english, maths);
         this.oop1 = oop1;

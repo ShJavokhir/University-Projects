@@ -13,7 +13,7 @@ package lab4_semester1;
 /**
  * Created by IntelliJ IDEA.<br/>
  * User: javokhir<br/>
- * Date: 06/10/21<br/>
+ * Date: 07/10/21<br/>
  * Time: 15:48<br/>
  */
 public class InterfaceDemo

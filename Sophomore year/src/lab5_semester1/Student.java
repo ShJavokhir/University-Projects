@@ -2,7 +2,7 @@
  * Created by IntelliJ IDEA.<br/>
  * User: javokhir<br/>
  * Date: 14/10/21<br/>
- * Time: 10:18<br/>
+ * Time: 15:18<br/>
  * ID: U2010257<br/>
  * Telegram: @ShJavohir<br/>
  * Github: https://github.com/ShJavokhir<br/>
@@ -10,12 +10,6 @@
 
 package lab5_semester1;
 
-/**
- * Created by IntelliJ IDEA.<br/>
- * User: javokhir<br/>
- * Date: 14/10/21<br/>
- * Time: 10:18<br/>
- */
 public class Student {
     private int studentID;
     private String studentName;

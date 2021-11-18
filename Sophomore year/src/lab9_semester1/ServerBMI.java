@@ -4,15 +4,15 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class ServerAB  
+public class ServerBMI
 {
   
 	public static void main(String[] args) 
 	{
-    		new ServerAB();
+    		new ServerBMI();
 	}
 
-	public ServerAB()// constructor
+	public ServerBMI()// constructor
 	{
     		try 
 		{
@@ -31,14 +31,14 @@ public class ServerAB
 
       			while (true)
 			{
-        			// Receive data from the client
+        			// Receive weight and height from the client
         			double weight = inputFromClient.readDouble();
 					double height = inputFromClient.readDouble();
-				 	System.out.println("We have received value " + weight + " " + height);
+				 	System.out.println("We have received weight: " + weight + " height: " + height);
         			// Compute bmi
         			double bmi = weight / (height * height);
 
-        			// Send area back to the client
+        			// Send bmi back to the client
         			outputToClient.writeDouble(bmi);
  			}
     		}

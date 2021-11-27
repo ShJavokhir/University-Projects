@@ -1,13 +1,8 @@
 /**
- * Created by IntelliJ IDEA.<br/>
- * User: javokhir<br/>
- * Date: 10/11/21<br/>
- * Time: 15:01<br/>
- * ID: U2010257<br/>
- * Telegram: @ShJavohir<br/>
- * Github: https://github.com/ShJavokhir<br/>
+ * u2010291
+ * Ayubxon
  */
-/*
+
 package lab8_semester1;
 
 import javafx.application.Application;
@@ -95,5 +90,3 @@ class HelloApplication extends Application {
         launch();
     }
 }
-
- */
